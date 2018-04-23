@@ -17,7 +17,6 @@ public class weatherRequester {
 
         ObjectMapper mapper = new ObjectMapper();
         return mapper.readValue(responseToParse, Response.class);
-
     }
 }
 

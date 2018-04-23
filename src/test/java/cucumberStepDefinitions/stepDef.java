@@ -11,7 +11,6 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.List;
 
-
 public class stepDef {
     private weatherRequester weatherRequester = new weatherRequester();
     private Response response = new Response();
@@ -20,9 +19,6 @@ public class stepDef {
     public void get_weather_result() throws IOException {
         response = weatherRequester.getWeather();
     }
-
-
-// COORD
 
     @Then("LON should be (.*)")
     public void check_lon(BigDecimal lon) {
@@ -35,7 +31,6 @@ public class stepDef {
 
     }
 
-    // WEATHER
     @Then("weather list should be:")
     public void check_WeatherID(List<Weather> weather) {
         for (int i = 0; i < weather.size(); i++) {
@@ -48,14 +43,11 @@ public class stepDef {
         }
     }
 
-
-    //BASE
     @Then("BASE should be (.*)")
     public void check_base(String base) {
         Assert.assertEquals("Wrong BASE", base, response.getBase());
     }
 
-    // MAIN
     @Then("TEMP should be (.*)")
     public void check_temp(BigDecimal temp) {
         Assert.assertEquals("Wrong TEMP", temp, response.getMain().getTemp());
@@ -82,13 +74,11 @@ public class stepDef {
     }
 
 
-    //VISIBILITY
     @Then("VISIBILITY should be (.*)")
     public void check_visibility(Integer visibility) {
         Assert.assertEquals("Wrong VISIBILITY", visibility, response.getVisibility());
     }
 
-    //WIND
     @Then("SPEED should be (.*)")
     public void check_speed(BigDecimal speed) {
         Assert.assertEquals("Wrong SPEED", speed, response.getWind().getSpeed());
@@ -99,19 +89,16 @@ public class stepDef {
         Assert.assertEquals("Wrong DEG", deg, response.getWind().getDeg());
     }
 
-    //CLOUDS
     @Then("ALL should be (.*)")
     public void check_all(Integer all) {
         Assert.assertEquals("Wrong ALL", all, response.getClouds().getAll());
     }
 
-    //DT
     @Then("DT should be (.*)")
     public void check_dt(Integer dt) {
         Assert.assertEquals("Wrong DT", dt, response.getDt());
     }
 
-    //SYS
     @Then("TYPE should be (.*)")
     public void check_type(Integer type) {
         Assert.assertEquals("Wrong Type", type, response.getSys().getType());
@@ -142,19 +129,16 @@ public class stepDef {
         Assert.assertEquals("Wrong SUNRISE", sunset, response.getSys().getSunset());
     }
 
-    //ID
     @Then("ID should be (.*)")
     public void check_ID(BigInteger id) {
         Assert.assertEquals("Wrong ID", id, response.getId());
     }
 
-    //NAME
     @Then("NAME should be (.*)")
     public void check_name(String name) {
         Assert.assertEquals("Wrong NAME", name, response.getName());
     }
 
-    //COD
     @Then("COD should be (.*)")
     public void check_cod(int cod) {
         Assert.assertEquals("Wrong COD", cod, response.getCod());

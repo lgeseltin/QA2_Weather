@@ -1,44 +1,33 @@
 package model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.math.BigInteger;
 import java.util.List;
 
-//@JsonIgnoreProperties(ignoreUnknown = true)
 public class Response {
     private Coord coord;
 
-    //    @JsonProperty("weather")
     private List<Weather> weather;
 
-    //    @JsonProperty("base")
     private String base;
 
     private Main main;
 
-    //    @JsonProperty("visibility")
     private Integer visibility;
 
     private Wind wind;
 
     private Clouds clouds;
 
-    @JsonProperty("dt")
     private Integer dt;
 
     private Sys sys;
 
-    @JsonProperty("id")
     private BigInteger id;
 
-    @JsonProperty("name")
     private String name;
 
-    @JsonProperty("cod")
     private Integer cod;
 
-    //COORD
     public Coord getCoord() {
         return coord;
     }
@@ -47,9 +36,6 @@ public class Response {
         this.coord = coord;
     }
 
-    // ??????????????????????????????????????????????????????????????????????????
-    // ??????????????????????????????????????????????????????????????????????????
-    //WEATHER
     public List<Weather> getWeather() {
         return weather;
     }
@@ -59,7 +45,6 @@ public class Response {
     }
 
 
-    //BASE
     public String getBase() {
         return base;
     }
@@ -68,7 +53,6 @@ public class Response {
         this.base = base;
     }
 
-    //MAIN
     public Main getMain() {
         return main;
     }
@@ -77,7 +61,6 @@ public class Response {
         this.main = main;
     }
 
-    //VISIBILITY
     public Integer getVisibility() {
         return visibility;
     }
@@ -86,7 +69,6 @@ public class Response {
         this.visibility = visibility;
     }
 
-    //WIND
     public Wind getWind() {
         return wind;
     }
@@ -95,7 +77,6 @@ public class Response {
         this.wind = wind;
     }
 
-    //CLOUDS
     public Clouds getClouds() {
         return clouds;
     }
@@ -104,7 +85,6 @@ public class Response {
         this.clouds = clouds;
     }
 
-    //DT
     public Integer getDt() {
         return dt;
     }
@@ -113,7 +93,6 @@ public class Response {
         this.dt = dt;
     }
 
-    //SYS
     public Sys getSys() {
         return sys;
     }
@@ -122,7 +101,6 @@ public class Response {
         this.sys = sys;
     }
 
-    //ID
     public BigInteger getId() {
         return id;
     }
@@ -131,7 +109,6 @@ public class Response {
         this.id = id;
     }
 
-    //NAME
     public String getName() {
         return name;
     }
@@ -140,7 +117,6 @@ public class Response {
         this.name = name;
     }
 
-    //COD
     public int getCod() {
         return cod;
     }

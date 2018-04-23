@@ -1,7 +1,5 @@
 package model;
 
-import cucumber.api.java.sl.In;
-
 import java.math.BigDecimal;
 
 public class Wind {
